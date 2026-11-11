@@ -1,0 +1,48 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+}
+
+// ---- pick the Minecraft version ------------------------------------------------------------
+def target = (project.findProperty('mc_target') ?: '26.1.2').toString()
+def vp = new Properties()
+file("versions/${target}/version.properties").withInputStream { vp.load(it) }
+
+version = ''                                   // keeps the jar name as qualityclip-<mod>-<mc>.jar
+group = project.maven_group
+base { archivesName = "qualityclip-${project.mod_version}-${target}" }
+
+repositories {
+    maven { url = 'https://maven.terraformersmc.com/releases/' }
+}
+
+sourceSets {
+    main {
+        java.srcDir "versions/${target}/java"          // the small per-version adapter classes
+        resources.srcDir "versions/${target}/resources"
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${vp.getProperty('minecraft_version')}"
+    // 26.x is unobfuscated: no mappings line, plain implementation/compileOnly (no "mod" prefix)
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${vp.getProperty('fabric_version')}"
+    compileOnly "com.terraformersmc:modmenu:${vp.getProperty('modmenu_version')}"
+}
+
+processResources {
+    inputs.property "version", project.mod_version
+    inputs.property "mcDepends", vp.getProperty('mc_depends')
+    filesMatching("fabric.mod.json") {
+        expand "version": project.mod_version, "mc_depends": vp.getProperty('mc_depends')
+    }
+}
+
+tasks.withType(JavaCompile).configureEach { it.options.release = 25 }
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "qualityclip",
+  "version": "${version}",
+  "name": "QualityClip",
+  "description": "The quality of life Minecraft clipboard, notebook and reminder tool! Save chat clips (with {x} {y} {z} {biome} placeholders), write multi-page notes with real text selection and Scribble formatting, save sign text, and set reminders with snooze and daily/weekly repeat. Quick Clips grab your coordinates with one key press. Works with the Book & Quill and sign screens: copy a book or sign into a clip, or paste a clip back. Import and export everything as JSON. Open it with the K key, Mod Menu, or the button above the chat box.",
+  "authors": [
+    "MattThatsWho"
+  ],
+  "license": "MIT",
+  "icon": "assets/qualityclip/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.qualityclip.QualityClipMod"
+    ],
+    "modmenu": [
+      "com.qualityclip.integration.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "qualityclip.mixins.json",
+    "qualityclip.chatscroll.mixins.json",
+    "qualityclip.screen.mixins.json",
+    "qualityclip.hud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "${mc_depends}",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "suggests": {
+    "scribble": "*",
+    "modmenu": "*"
+  }
+}
