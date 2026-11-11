@@ -1,8 +1,14 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Report a bug on the QualityClip website
+  - name: Report a bug
     url: https://mattsmods.vercel.app/qualityclip/report-bug
-    about: Prefer the website form? Report bugs here instead.
-  - name: QualityClip homepage and docs
-    url: https://mattsmods.vercel.app/qualityclip
-    about: Features, downloads and how-to guides.
+    about: Found something broken? Reports are handled on the QualityClip website.
+  - name: Support
+    url: https://mattsmods.vercel.app/qualityclip/support
+    about: Need help using QualityClip?
+  - name: Community and feature ideas
+    url: https://mattsmods.vercel.app/qualityclip/threads
+    about: Suggest features and chat with other players.
+  - name: Downloads
+    url: https://mattsmods.vercel.app/qualityclip/download
+    about: Get the latest QualityClip release.

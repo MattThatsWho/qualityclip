@@ -11,7 +11,7 @@
   "contact": {
     "homepage": "https://mattsmods.vercel.app/qualityclip",
     "sources": "https://github.com/MattThatsWho/qualityclip",
-    "issues": "https://github.com/MattThatsWho/qualityclip/issues"
+    "issues": "https://mattsmods.vercel.app/qualityclip/report-bug"
   },
   "icon": "assets/qualityclip/icon.png",
   "environment": "client",

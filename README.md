@@ -1,7 +1,7 @@
 # QualityClip
 *Your quality-of-life clipboard, notebook and reminder tool for Minecraft.*
 
-[Website / docs](https://mattsmods.vercel.app/qualityclip) · [Report a bug](https://mattsmods.vercel.app/qualityclip/report-bug) · [Issues](https://github.com/MattThatsWho/qualityclip/issues) · [Releases](https://github.com/MattThatsWho/qualityclip/releases)
+[Website](https://mattsmods.vercel.app/qualityclip) · [Download](https://mattsmods.vercel.app/qualityclip/download) · [Report a bug](https://mattsmods.vercel.app/qualityclip/report-bug) · [Support](https://mattsmods.vercel.app/qualityclip/support) · [Community](https://mattsmods.vercel.app/qualityclip/threads)
 
 Client-side Fabric mod. Supports **26.1.2**, **26.2** and **26.3**.
 
