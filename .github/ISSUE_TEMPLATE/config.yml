@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a bug on the QualityClip website
+    url: https://mattsmods.vercel.app/qualityclip/report-bug
+    about: Prefer the website form? Report bugs here instead.
+  - name: QualityClip homepage and docs
+    url: https://mattsmods.vercel.app/qualityclip
+    about: Features, downloads and how-to guides.

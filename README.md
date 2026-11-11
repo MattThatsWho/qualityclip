@@ -1,5 +1,8 @@
 # QualityClip
 *Your quality-of-life clipboard, notebook and reminder tool for Minecraft.*
+
+[Website / docs](https://mattsmods.vercel.app/qualityclip) · [Report a bug](https://mattsmods.vercel.app/qualityclip/report-bug) · [Issues](https://github.com/MattThatsWho/qualityclip/issues) · [Releases](https://github.com/MattThatsWho/qualityclip/releases)
+
 Client-side Fabric mod. Supports **26.1.2**, **26.2** and **26.3**.
 
 ## What it does
@@ -23,7 +26,7 @@ gradle build -Pmc_target=26.2     # or 26.3
 Jar: `build/libs/qualityclip-<mod version>-<mc version>.jar` (not `-sources`).
 Each target's Minecraft / Fabric API / Mod Menu versions are in `versions/<target>/version.properties`
 (26.3 values taken from a working 26.3 install; double check at https://fabricmc.net/develop).
-GitHub Actions (`.github/workflows/build.yml`) builds all three and attaches the jars.
+GitHub Actions (`.github/workflows/build.yml`) builds all three and uploads the jars as build artifacts; pushing a tag like `v0.0.3` (`release.yml`) publishes them as a GitHub Release.
 
 ## How multiple Minecraft versions are handled
 One shared codebase in `src/main/java`. The few things that differ between versions live in
